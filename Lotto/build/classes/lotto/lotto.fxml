@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lotto.Controller">
+   <children>
+      <Pane id="basePane" fx:id="basePane" layoutX="2.0" prefHeight="600.0" prefWidth="800.0">
+         <children>
+            <Label fx:id="tag" alignment="CENTER" contentDisplay="CENTER" layoutX="195.0" layoutY="191.0" prefHeight="16.0" prefWidth="389.0" text="Üdvözlöm!">
+               <font>
+                  <Font name="Ubuntu Condensed" size="26.0" />
+               </font>
+            </Label>
+            <HBox layoutX="113.0" layoutY="305.0" spacing="50.0">
+               <children>
+                  <TextField id="input1" fx:id="input1" prefHeight="26.0" prefWidth="36.0" />
+                  <TextField id="input2" fx:id="input2" prefHeight="26.0" prefWidth="36.0" />
+                  <TextField id="input3" fx:id="input3" prefHeight="26.0" prefWidth="36.0" />
+                  <TextField id="input4" fx:id="input4" prefHeight="26.0" prefWidth="36.0" />
+                  <TextField id="input5" fx:id="input5" prefHeight="26.0" prefWidth="36.0" />
+                  <TextField id="input6" fx:id="input6" prefHeight="26.0" prefWidth="36.0" />
+                  <TextField id="input7" fx:id="input7" prefHeight="26.0" prefWidth="36.0" />
+               </children>
+            </HBox>
+            <Text layoutX="212.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kérem írjon be hét különböző számot 1 és 35 között!">
+               <font>
+                  <Font name="Ubuntu Condensed" size="18.0" />
+               </font></Text>
+            <Text layoutX="243.0" layoutY="85.0" stroke="#20abe5" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="2.0" text="SKANDI APP">
+               <font>
+                  <Font name="DejaVu Sans ExtraLight" size="49.0" />
+               </font>
+               <effect>
+                  <Reflection />
+               </effect>
+            </Text>
+            <HBox layoutX="113.0" layoutY="371.0" prefHeight="40.0" prefWidth="599.0" spacing="73.0">
+               <children>
+                  <Label id="label1" fx:id="label1" />
+                  <Label id="label2" fx:id="label2" />
+                  <Label id="label3" fx:id="label3" />
+                  <Label id="label4" fx:id="label4" />
+                  <Label id="label5" fx:id="label5" />
+                  <Label id="label6" fx:id="label6" />
+                  <Label id="label7" fx:id="label7" />
+               </children>
+            </HBox>
+            <Label id="resultLabel" fx:id="resultLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="207.0" layoutY="456.0" prefHeight="16.0" prefWidth="361.0" textAlignment="CENTER">
+               <font>
+                  <Font name="Ubuntu Condensed" size="13.0" />
+               </font></Label>
+          <Button fx:id="button" alignment="CENTER" contentDisplay="CENTER" layoutX="270.0" layoutY="510.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#handleButtonAction" prefHeight="26.0" prefWidth="240.0" text="Sorsolás!" textAlignment="CENTER">
+               <font>
+                  <Font name="Ubuntu Condensed" size="21.0" />
+               </font></Button>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="337.0" layoutY="346.0" text="Sorsolt számok:" textAlignment="CENTER">
+               <font>
+                  <Font name="Ubuntu Condensed" size="17.0" />
+               </font>
+            </Label>
+            </children>
+      </Pane>
+      <Pane id="alertPane" fx:id="alertPane" prefHeight="600.0" prefWidth="802.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1a4b79" height="227.0" layoutX="214.0" layoutY="187.0" stroke="BLACK" strokeType="INSIDE" width="347.0">
+               <effect>
+                  <Bloom />
+               </effect></Rectangle>
+            <Label id="alertText" fx:id="alertText" alignment="CENTER" contentDisplay="CENTER" layoutX="224.0" layoutY="187.0" prefHeight="165.0" prefWidth="327.0" text="seggtitán" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Ubuntu Light" size="18.0" />
+               </font></Label>
+            <Button id="alertButton" fx:id="alertButton" layoutX="369.0" layoutY="352.0" mnemonicParsing="false" onAction="#handleAlertButton" text="OK">
+               <font>
+                  <Font name="Ubuntu Condensed" size="14.0" />
+               </font></Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
